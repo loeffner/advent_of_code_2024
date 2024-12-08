@@ -1,0 +1,17 @@
+[package]
+name = "day02"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+criterion = "0.4"
+rand = "0.8"
+
+
+[[bench]]
+name = "check_safety_dampened"
+harness = false
+
+[[bench]]
+name = "check_safety"
+harness = false
