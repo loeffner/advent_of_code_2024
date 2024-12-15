@@ -1,4 +1,6 @@
 use std::fs::File;
+use std::io;
+use std::io::BufRead;
 
 pub fn total_distance(arr1: &mut Vec<i32>, arr2: &mut Vec<i32>) -> i32 {
     arr1.sort_unstable();
@@ -103,7 +105,7 @@ mod tests {
     }
     #[test]
     fn test_total_distance_from_file() {
-        let filename = "tests/input.txt";
+        let filename = "data/test.txt";
 
         let result = vectors_from_file(filename);
         assert!(result.is_ok());
